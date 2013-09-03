@@ -5,7 +5,12 @@
 		<%= link_to "Social Note", "http://www.facebook.com" %>
 		application.
 	</p>
-	<p>
-		<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
-	</p>
+	<div id="user-widget">
+		 <% if current_user %>
+		   Welcome <strong><%= current_user.name %></strong>!
+	    <%= link_to "Sign out", signout_path, class: "btn btn-primary btn-large", id: "sign_out" %>
+	  <% else %>
+	    <%= link_to "Sign in with Facebook", "/auth/facebook", class: "btn btn-primary btn-large", id: "sign_in" %>
+	  <% end %>
+	</div>
 </div>
