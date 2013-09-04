@@ -6,6 +6,7 @@ gem 'omniauth-facebook', '1.4.0'
 
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'simple_form'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
