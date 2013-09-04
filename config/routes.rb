@@ -3,7 +3,6 @@ Socialnote::Application.routes.draw do
 
  
   get 'about' => 'pages#about'
-
   root :to => 'pages#home'
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]

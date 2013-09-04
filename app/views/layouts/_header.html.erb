@@ -16,12 +16,15 @@
       <div class="nav-collapse collapse">
       	 <ul class="nav">
       	 	<li><%= link_to "Home", root_path %></li>
-		 	<li><%= link_to "About", about_path %></li>
-		 </ul>
-      	 <ul class="nav pull-right">
+		    	<li><%= link_to "About", about_path %></li>
+          <% unless user_id = nil %>
+            <li><%= link_to "Only Me Note", "/pins" %></li>
+          <% end %>
+		    </ul>
+      	<ul class="nav pull-right">
           <li><%= link_to "Add +", new_pin_path %></li>
       	 	<li><%= link_to "Login", "/auth/facebook" %></li>
-		 </ul>	
+		    </ul>	
         <!-- .nav, .navbar-search, .navbar-form, etc -->
       </div>
  
