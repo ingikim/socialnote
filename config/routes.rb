@@ -1,7 +1,7 @@
 Socialnote::Application.routes.draw do
   resources :pins
 
-
+ 
   get 'about' => 'pages#about'
 
   root :to => 'pages#home'
